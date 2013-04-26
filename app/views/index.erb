@@ -1,23 +1,17 @@
 <div class="container">
-  <h1>Welcome to Sinatra!</h1>
-  <p>Hello, world!</p>
+  <h1>Welcome to anonblog!</h1>
+  <p>Where you can tell the world how you <em>really</em> feel.</p>
 
-  <table>
-    <tr>
-      <th>File Description</th>
-      <th>File Location</th>
-    </tr>
-    <tr>
-      <td>This view file</td>
-      <td><code><%= __FILE__.gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The layout file</td>
-      <td><code><%= File.expand_path('../layout.erb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The current controller</td>
-      <td><code><%= File.expand_path('../../controllers/index.rb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-  </table>
+  <form name="new_blog_post" method="post" action="/post/new">
+    Title: <input id="styled_title" type="text" name="title"><br/>
+    <br/>
+    Body: <textarea id="styled_text_area" type="textarea" name="body"></textarea><br/>
+    <br/>
+
+    <label for="post_tags">Tags:</label>
+    <input id="post_tags" name="post[tags]" value="tag1, tag2, some other tag, a fourth tag"><br/><br/>
+
+    <input type="submit" value="PREACH!">
+  </form>
+
 </div>

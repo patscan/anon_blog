@@ -1,0 +1,29 @@
+Models: 
+
+Post
+id (free)
+title
+body
+timestamps
+
+Tag
+id (free)
+Name
+
+posts table
+----------------
+id
+title (not null)
+body  (not null)
+
+tags table
+-----------------
+id
+name (not null)
+
+posts_and_tags (join table)-
+no model!
+---------------------------
+NO primary id
+post_id
+tag_id

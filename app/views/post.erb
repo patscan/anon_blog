@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Here's your post:</h1>
+  
+  <%= @post.title %>
+  <%= @post.body  %>
+  <h2>Tags:</h2>
+  <% @post.tags.each do |tag| %>
+  <%= tag.name  %><br/>
+  <% end %>
+
+</div>

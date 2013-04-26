@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>Here's what people are chewing on:</h1>
+  
+  <% @posts.each do |p| %>
+    <h1><%= p.title %></h1>
+    <%= p.body %><br/>
+
+    <% p.tags.each do |t| %>
+      <%= t.name %><br/>
+    <% end %>
+    -----------------------------------------
+  <% end %>
+
+  <!-- Insert an awesome divider image! -->
+
+
+
+</div>
+
+erb snippets

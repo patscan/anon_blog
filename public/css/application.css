@@ -1,9 +1,42 @@
+body {
+  background-image: url('/grey_wash_wall.png');
+}
+
 .container {
+  background-color: white;
   margin: 20px auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  /*border: 1px dotted black;*/
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+
+  -moz-box-shadow: 3px 3px 4px #000;
+  -webkit-box-shadow: 3px 3px 4px #000;
+  box-shadow: 3px 3px 4px #000;
 }
+
+h1 {
+  padding-top: 20px;
+}
+
 th {
   text-align: left;
+}
+
+#styled_title {
+  width: 100%;
+}
+
+#styled_text_area {
+  width: 100%;
+  height: 320px;
+  border: 3px solid #cccccc;
+  /*padding: 5px;*/
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+
+#post_tags {
+ width: 100%; 
 }

@@ -1,1 +1,63 @@
-psuedo code
+psuedo code for anon blog
+
+two core models; posts and tags
+
+suggested that we make 3 controller files:
+index.rb
+posts.rb
+tags.rb;
+
+index controller: 
+just have index route; displaying homepage
+
+tags controller
+Tag related routes
+
+posts controller
+Post related routes
+
+Methods we want for posts: (form method in parens:route idea)
+1. show me all posts (get : post/all ?)
+2. show me a particular post (get : post/:id )
+3. create a new post ( post : post/create )
+4. edit an existing post ( put : post/:id/edit )
+5. delete an existing post ( delete : post/:id/delete )
+
+Methods we want for tags:
+1. Show all posts given a tag  (get : tag/:tag_name )
+
+Tags are create via the Post creation form; (possibly on edit)
+
+Create all necessary models and migrations; you should have three models what are they?
+
+Post
+Tag
+posts_and_tags   (it's many to many, right? a post can have many tags; 
+                  a tag can belong to many posts; we need a join table to
+                  express this relationship; remember, we don't need a primary
+                  id on this table )
+
+we need to ensure posts have titles, and have body copy, like so;
+
+class Post < ActiveRecord::Base
+  validates :body, :presence => true
+  validates :title, :presence => true
+end
+
+but we also need to do it on the database level; so insert the same logic on the validations; <----!!!!!!!!
+
+design simple pages and forms; here's an idea to allow multiple tags to get entered
+<label for="post_tags">Tags:</label>
+<input id="post_tags" name="post[tags]" value="tag1, tag2, some other tag, a fourth tag">
+
+Handle error cases;
+handle Style!
+
+
+
+
+
+
+
+
+
