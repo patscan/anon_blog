@@ -6,7 +6,7 @@ body {
   background-color: white;
   margin: 20px auto;
   width: 600px;
-  padding: 0px 20px 20px 20px;
+  padding: 0px 20px 60px 20px;
   /*border: 1px dotted black;*/
   -moz-border-radius: 15px;
   border-radius: 15px;
@@ -16,8 +16,25 @@ body {
   box-shadow: 3px 3px 4px #000;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 h1 {
+  font-size: 40px;
   padding-top: 20px;
+  color: #038EAA;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+h2 {
+  font-family: 'Roboto Condensed', sans-serif;
+  display: block;
+  margin-top: 35px;
+  clear: both;
+  border-bottom: 1px dotted orange;
+  padding-bottom: 3px;
 }
 
 th {
@@ -39,4 +56,41 @@ th {
 
 #post_tags {
  width: 100%; 
+}
+
+.edit_button {
+  margin-top: 16px;
+  width: 75px;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 45px;
+  text-transform: uppercase;
+  text-align: center;
+  height: 20px;
+  line-height: 15px;
+  padding-bottom: 5px;
+  font-size: 10px;
+  background-color: gray;
+  color: white;
+  border: 0;
+}
+
+#tag_small {
+  font-size: 11px;
+  color: #038EAA;
+  display: inline-block;
+  border: 1px dotted orange;
+  padding: 5px;
+  margin-top: 15px;
+  margin-right: 8px;
+}
+
+#tag_big {
+  font-size: 31px;
+  color: orange;
+  display: inline-block;
+  border: 1px dotted #038EAA;
+  padding: 5px;
+  margin-top: 15px;
+  margin-right: 8px;
 }

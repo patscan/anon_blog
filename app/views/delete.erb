@@ -1,16 +1,14 @@
 <div class="container">
   <h1>Welcome to anonblog!</h1>
   <p>Where you can tell the world how you <em>really</em> feel.</p>
-
-  <form name="new_blog_post" method="post" action="/post/new">
-    Title: <input id="styled_title" type="text" name="title"><br/>
+  <form name="delete_post" action="/post/delete/<%= @post.id %>" method="post">
+    <input name="_method" value="delete" type="hidden" >
+    Title: <input id="styled_title" type="text" name="title" value="<%= @post.title %>"<br/>
     <br/>
-    Body: <textarea id="styled_text_area" type="textarea" name="body"></textarea><br/>
+    Body: <textarea id="styled_text_area" type="textarea" name="body"><%= @post.body %></textarea><br/>
     <br/>
-
     <label for="post_tags">Tags:</label>
     <input id="post_tags" name="post[tags]" value="tag1, tag2, some other tag, a fourth tag"><br/><br/>
-
     <input type="submit" value="PREACH!">
   </form>
 </div>

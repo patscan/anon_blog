@@ -7,3 +7,7 @@ helpers do
     "<em>#{text}</em>"
   end
 end
+
+helper do
+time.strftime
+end

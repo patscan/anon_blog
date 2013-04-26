@@ -1,20 +1,19 @@
 <div class="container">
   <h1>Here's what people are chewing on:</h1>
-  
-  <% @posts.each do |p| %>
-    <h1><%= p.title %></h1>
+  <% @posts.reverse.each do |p| %>
+    <h2><%= p.title %></h1>
     <%= p.body %><br/>
-
     <% p.tags.each do |t| %>
-      <%= t.name %><br/>
+      <div id="tag_small">
+      <a href="/tag/<%=t.name%>">   
+        <%= t.name %>
+      </a>
+      
+      </div>
     <% end %>
-    -----------------------------------------
+    <form action="/post/edit/<%= p.id %>" method="get"> <input class="edit_button" type="submit" value="edit"></form>
+    <form action="/post/delete/<%= p.id %>" method="get"> <input class="edit_button" type="submit" value="delete"></form>
+
   <% end %>
-
   <!-- Insert an awesome divider image! -->
-
-
-
 </div>
-
-erb snippets

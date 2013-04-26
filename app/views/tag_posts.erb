@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Posts about <%= @tag.name %></h1>
+
+    <% posts = Post.all(:include => :tags, :conditions => ["tags.id = ?", @tag.id]) %>
+    <% posts.each do |post| %>
+      <h2><%= post.title %></h2>
+      <%= post.body %><br/>
+    <% end %>
+</div>

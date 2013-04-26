@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>Poppin' tags:</h1>
+  <% Tag.all.each do |t| %>
+    <div id="tag_big"> 
+      <a href="/tag/<%= t.name %>"><%= t.name %></a>
+    </div> 
+  <% end %>
+</div>
